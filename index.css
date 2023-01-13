@@ -1,0 +1,650 @@
+:root{
+    --color-primary: green;
+    --color-white: white;
+    --color-danger: red;
+    --color-success: blue;
+    --color-warning: lightblue;
+    --color-info-white: rgb(255, 255, 255);
+    --color-info-light: rgb(223, 223, 223);
+    --color-background: rgb(215, 215, 215);
+    --color-black: black;
+    --color-transparent: rgba(255, 255, 255, 0);
+    --box-shadow: 0.2rem 0.2rem 0.3rem var(--color-info-white);
+    --filter: invert(0.1);
+    --margin-bottom: 20px;
+    --font-primary: 24px;
+}
+:root.lightMode{
+    
+
+    --color-info-light: black;
+    --color-black: white;
+    --color-info-white: rgb(38, 38, 38);
+    --color-background: rgb(18, 18, 18);
+    --filter: invert(1);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border:0;
+    appearance: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    overflow-x: hidden;
+    position: absolute;
+    background-color: var(--color-background);
+}
+
+
+img{
+    display: block;
+    width: 100%;
+}
+/* container css */
+
+.container{
+    background-color: var(--color-background);
+    color:var(--color-black);
+    display: grid;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 26rem;
+}
+/* .container.change_bg{
+    background-color: var(--color-black);
+    color: var(--color-info-light);
+} */
+.container .humberger{
+    display: none;
+}
+/* aside css */
+
+.container aside{
+    background-color:var(--color-info-white);
+    height: auto;
+    position: relative;
+}
+aside .close{
+    display: none;
+}
+
+/* logo div css */
+
+.container .logo img{
+    width: 25%;
+}
+.container .logo, .top{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.container .top{
+    padding: 10px;
+}
+
+.top{
+    cursor: pointer;
+}
+.container .logo h2{
+    font-size: 27px;
+}
+.container .logo .danger{
+    color:var(--color-danger)
+}
+
+/* side bar css*/
+.container .sidebar{
+    margin-top: 2rem;
+}
+.container .sidebar a{
+    display: flex;
+    color: inherit;
+    gap:15px;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.container .sidebar a:not(:last-child){
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.container .sidebar a.active{
+    background-color: var(--color-primary);
+    margin-left: 0px;
+    color: var(--color-white);
+}
+.container .sidebar a:hover:not(:last-child, .active){
+    background-color: var(--color-danger);
+    color: var(--color-white);
+    margin-left: 0;
+}
+.sidebar a:last-child{
+    background-color: var(--color-danger);
+    color: var(--color-white);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.sidebar a:last-child:hover{
+    background-color: var(--color-info-light);
+    color: var(--color-black);
+}
+/* message count */
+
+.message-count{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-danger);
+    background-color: var(--color-black);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ################ sidebar end ############ */
+
+/* ################ Main start ############ */
+
+main{
+    padding-top: 2rem;
+}
+main h1{
+    margin-bottom: var(--margin-bottom);
+    font-size: var(--font-primary);
+}
+main input[type="date"]{
+    background-color: var(--color-info-white);
+    color: inherit;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+main input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+    filter: var(--filter);
+    
+  }
+main input{
+    user-select: none;
+}
+.insights{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    padding-top: 20px;
+}
+.insights > div:hover{
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+}
+
+.insights > .sale,.expenses,.income{
+    background-color: var(--color-info-white);
+    border-radius: 1.2rem;
+    padding: 20px;
+}
+
+.insights h2{
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.insights .price{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-bottom: var(--margin-bottom);
+}
+.insights .light_text{
+    color:var(--color-info-white);
+    font-weight: 900;
+}
+.sale span,.expenses span,.income span{
+    font-size: 20px;
+    background-color: var(--color-success);
+    color: var(--color-white);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.expenses span{
+    background-color: var(--color-danger);
+}
+.income span{
+    background-color: var(--color-primary);
+}
+.sale,.expenses,.income{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* ######## progress bar ########## */ 
+
+.insights .progress{
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+}
+.insights .progress svg{
+    background-color:var(--color-transparent);
+    width: 7rem;
+    height: 7rem;
+}
+.insights .progress svg circle{
+    fill: var(--color-info-light);
+    stroke: var(--color-danger);
+    stroke-width: 10;
+    transform: translate(5px, 5px);
+    stroke-linecap: round;
+    stroke-dasharray: 110;
+    stroke-dashoffset: 92;
+}
+.insights .sale .progress svg circle{
+    stroke-dasharray: 180;
+    stroke-dashoffset: -30;
+}
+.insights .expenses .progress svg circle{
+    stroke-dasharray: 80;
+    stroke-dashoffset: 20;
+}
+
+.insights .income .progress svg circle{
+    stroke-dasharray: 110;
+    stroke-dashoffset: 35;
+}
+
+.insights .progress .progress_num{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* ########## Recent Order Start ########### */
+
+.recent_order{
+    margin-top: 40px;
+}
+.recent_order h2{
+    font-size: var(--font-primary);
+    margin-bottom: var(--margin-bottom);
+    font-weight: bolder;
+    
+}
+
+.recent_order table{
+   background-color: var(--color-info-white);
+   border-radius: 1rem;
+   transition: all 0.3s ease;
+   box-shadow: var(--box-shadow);
+   width: 100%;
+}
+.recent_order table:hover{
+    box-shadow: none;
+}
+
+table thead tr th{
+    padding: 20px;
+    border-bottom: 1px solid grey;
+}
+table,td,tr{
+    padding: 10px;
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* --------------- End of Main ----------------- */
+
+/* --------------- Start of Right Sidebar ----------------- */
+
+/* --------------- Start of Recent orders ----------------- */
+
+
+.right_sidebar{
+   padding: 10px 0px 30px 0px;
+   padding-right: 2rem;
+   overflow-y: auto;
+   height: 100vh;
+}
+.right_sidebar h2{
+    margin-top: 2rem;
+}
+.right_sidebar h2{
+    font-size: var(--font-primary);
+    margin-bottom: var(--margin-bottom);
+}
+.review_section{
+    background-color: var(--color-info-white);
+    padding: 30px;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.review_section .review{
+    display: flex;
+    gap: 1rem;
+}
+.review_section .review img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+/* --------------- End of Right Sidebar ----------------- */
+
+/* --------------- Start Of Sales analytics of Right Sidebar ----------------- */
+
+
+.sales_analytics{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.sales_analytics .sale_data{
+    display: flex;
+    gap: 1.5rem;
+    background-color: var(--color-info-white);
+    padding: 10px 20px;
+    border-radius: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.sales_analytics .sale_data span{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sales_analytics .sale_data h6{
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+/* --------------- End of Sales analytics of Right Sidebar ----------------- */
+
+
+/* --------------- start of Add project ----------------- */
+
+.add_project{
+    background-color: var(--color-transparent);
+    border: 1px dashed;
+    border-radius: 1.5rem;
+    padding: 15px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.add_project:hover{
+    background-color:var(--color-danger);
+    border-color:var(--color-danger);
+    color:var(--color-white)
+}
+
+/* --------------- End of Add project ----------------- */
+
+/* --------------- start of User data top right ----------------- */
+
+.userInfo{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+.userInfo .humberger{
+    display: none;
+}
+.userInfo .theme{
+    background-color: var(--color-info-white);
+    color: var(--color-black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 4.2rem;
+    height: 1.6rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    user-select: none;
+}
+.userInfo .theme .active{
+    background-color: var(--color-danger);
+    color: var(--color-white);
+    border-radius: 1rem;
+    width: 2.5rem;
+}
+
+.userInfo .theme span.active.remove{
+    background-color: transparent;
+    color: var(--color-white);
+    border-radius: 1rem;
+    width: 2.1rem;
+}
+
+.userInfo .user{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+}
+.userInfo .user img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* --------------- End of User data top right ----------------- */
+
+
+/* --------------- Start of Media queries ----------------- */
+
+@media screen and (max-width:1420px){
+    .container{
+        width: 100%;
+        grid-template-columns: 12rem auto 22rem;
+    }
+    main .insights{
+        grid-template-columns: 1fr;
+    }
+    .right_sidebar{
+        overflow-y: visible;
+    }
+    .insights .sale, .expenses, .income{
+        justify-content: space-around;
+    }
+}
+@media screen and (max-width:1200px){
+    main{
+        padding-bottom: 2rem;
+    }
+    aside .sidebar h3{
+        display: none;
+    }
+    aside .logo h2{
+        display: none;
+    }
+    aside .logo img{
+        width: 80% !important;
+    }
+    .container{
+        grid-template-columns: 6rem auto 23rem;
+    }
+    .recent_order{
+        position: absolute;
+        left:75%;
+        transform: translateX(-75%);
+        margin-top: 9rem;
+        width: 80%;
+    }
+   
+}
+@media screen and (max-width:768px) {
+    .container{
+        grid-template-columns: 6rem auto;
+    }
+    main{
+        position: relative;
+        padding-right: 2rem;
+    }
+    .recent_order{
+        position: relative;
+        margin-top: 3rem;
+        width: 100%;
+    }
+    .container{
+        margin-top: 5rem;
+    }
+   
+   .right_sidebar{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 83%;
+    margin-top: -3rem;
+    margin-left: 17%;
+    }
+    .right_sidebar .userInfo{
+        position: fixed;
+        top:0;
+        margin: 0;
+        padding: 0;
+        right:0;
+        width: 100%;
+        background-color: var(--color-info-white);
+        padding: 1rem;
+        z-index: 1;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    aside .logo img{
+        position: fixed;
+        width: 3.5rem !important;
+        z-index: 2;
+        left:1rem;
+        top: 0.7rem;
+    }
+    
+    aside .logo h2{
+        display: block;
+        margin-top: 1rem;;
+        font-size: 1.2rem !important;
+    }
+   
+    
+}
+
+@media screen and (max-width:668px) {
+    .container{
+        grid-template-columns: 1fr;
+        padding: 1.5rem 0rem 0rem 1rem;
+    }
+    .container aside{
+        position: fixed;
+        z-index: 3;
+        width: 30%;
+        top:0;
+        left:0;
+        display: none;
+        bottom:0;
+        animation: anim 0.3s ease-out;
+    }
+    @keyframes anim {
+        from{
+            width: 0%;
+            opacity: 1;
+        }
+        to{
+            width: 30%;
+            opacity: 1;
+        }
+    }
+    aside .sidebar, aside .logo h2, aside .logo img{
+        animation: anim2 0.3s ease-out;
+    }
+    
+    @keyframes anim2 {
+        0%{
+            opacity: 0;
+        }
+        60%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+   
+    .container aside.active{
+        display: block;
+    }
+    aside .logo img{
+        position: relative;
+        left:0;
+    }
+    aside .logo h2{
+        display: block;
+        margin-top: 1rem;;
+        font-size: 1.2rem !important;
+    }
+    .userInfo .humberger{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .userInfo .humberger span{
+        cursor: pointer;
+    }
+    .userInfo .humberger img{
+        width: 30%;
+    }
+    .right_sidebar .userInfo{
+        justify-content: space-evenly;
+    }
+    .right_sidebar{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    main{
+        padding-right: 0 !important;
+        width: 100%;
+    }
+    .add_project{
+        margin-top: 2rem;
+    }
+    
+  
+  
+}
+
+
+
+
+
+/* --------------- End Of Media queries ----------------- */
+
+

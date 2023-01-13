@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dynamic Dashboard</title>
+  </head>
+  <body>
+    <!-- ############# spliting main layout ################ -->
+
+    <div class="container" id="container">
+      <!-- ############## Aside start ############### -->
+      <aside id="aside">
+        <div class="top">
+          <div class="logo" id="logo">
+            <img src="assets/logo.png" alt="logo" />
+            <h2>EGA<span class="danger">TOR</span></h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp"> close </span>
+          </div>
+        </div>
+        <!-- ############## side bar ##################### -->
+        <div class="sidebar" id="sidebar">
+          <a href="#" class="active">
+            <span class="material-icons-sharp">grid_view</span>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">group</span>
+            <h3>Customers</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">receipt_long</span>
+            <h3>Orders</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">signal_cellular_alt</span>
+            <h3>Analytics</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">chat</span>
+            <h3>Messages</h3>
+            <span class="message-count">26</span>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">inventory_2</span>
+            <h3>Products</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">summarize</span>
+            <h3>Reports</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">manage_accounts</span>
+            <h3>Setting</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">post_add</span>
+            <h3>Add Projects</h3>
+          </a>
+          <a href="#" id="logout">
+            <span class="material-icons-sharp">logout</span>
+            <h3>Logout</h3>
+          </a>
+        </div>
+        <!-- ############### Side bar end ################# -->
+      </aside>
+      <!-- ############### Aside end ################# -->
+
+      <!-- ############### Main start ################# -->
+
+      <main>
+        <h1>Dashboard</h1>
+        <div class="date">
+          <input type="date" />
+        </div>
+
+        <div class="insights">
+          <div class="sale">
+            <div class="data">
+              <span class="material-icons-sharp"> analytics </span>
+              <h2>Total Sales</h2>
+              <p class="price">$ 25,024</p>
+              <p class="light_text">Last 24 Hours</p>
+            </div>
+
+            <div class="progress">
+              <svg>
+                <circle cx="38" cy="38" r="36"></circle>
+              </svg>
+              <div class="progress_num">
+                <p>81%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="expenses">
+            <div class="data">
+              <span class="material-icons-sharp"> analytics </span>
+              <h2>Total Expensess</h2>
+              <p class="price">$ 10,024</p>
+              <p class="light_text">Last 24 Hours</p>
+            </div>
+
+            <div class="progress">
+              <svg>
+                <circle cx="38" cy="38" r="36"></circle>
+              </svg>
+              <div class="progress_num">
+                <p>62%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="income">
+            <div class="data">
+              <span class="material-icons-sharp"> analytics </span>
+              <h2>Total Incomes</h2>
+              <p class="price">$ 20,024</p>
+              <p class="light_text">Last 24 Hours</p>
+            </div>
+
+            <div class="progress">
+              <svg>
+                <circle cx="38" cy="38" r="36"></circle>
+              </svg>
+              <div class="progress_num">
+                <p>44%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ########### insights end ############## -->
+
+        <!-- ########### Recent order start ############## -->
+
+        <section class="recent_order">
+          <h2>Recent Orders</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th>Product Number</th>
+                <th>Payment</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Foldable Mini Drone</td>
+                <td>5848596</td>
+                <td>Paid</td>
+                <td>Delivered</td>
+                <td>Details</td>
+              </tr>
+
+              <tr>
+                <td>Foldable Mini Drone</td>
+                <td>5848596</td>
+                <td>Paid</td>
+                <td>Delivered</td>
+                <td>Details</td>
+              </tr>
+
+              <tr>
+                <td>Foldable Mini Drone</td>
+                <td>5848596</td>
+                <td>Paid</td>
+                <td>Delivered</td>
+                <td>Details</td>
+              </tr>
+
+              <tr>
+                <td>Foldable Mini Drone</td>
+                <td>5848596</td>
+                <td>Paid</td>
+                <td>Delivered</td>
+                <td>Details</td>
+              </tr>
+
+              <tr>
+                <td>Foldable Mini Drone</td>
+                <td>5848596</td>
+                <td>Paid</td>
+                <td>Delivered</td>
+                <td>Details</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+      <!------------------- Main End -------------------->
+
+      <!---------------- right sidebar start ----------------->
+
+      <div class="right_sidebar">
+        <div class="userInfo">
+          <!-- this is for mob humberger hide show -->
+          <div class="humberger">
+            <img src="assets/logo.png" alt="logo" />
+            <span class="material-icons-sharp" id="humberger"> menu </span>
+          </div>
+          <!-- End of mob humberger hide show -->
+
+          <div class="theme" id="theme">
+            <span class="material-icons-sharp active" id="light_mode">
+              light_mode
+            </span>
+            <span class="material-icons-sharp" id="dark_mode"> dark_mode </span>
+          </div>
+          <div class="user">
+            <div>
+              <p>
+                hey, <span><b>Danniel</b></span>
+              </p>
+              <p>admin</p>
+            </div>
+            <img src="assets/profile-4.jpg" />
+          </div>
+        </div>
+
+        <h2>Recent Updates</h2>
+        <div class="review_section">
+          <div class="review">
+            <img src="assets/profile-1.jpg" />
+            <p>
+              <b>Navin Kandpal </b
+              ><span
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam. cumque.</span
+              >
+            </p>
+          </div>
+
+          <div class="review">
+            <img src="assets/profile-2.jpg" />
+            <p>
+              <b>Piyush Bansal </b
+              ><span
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam. cumque.</span
+              >
+            </p>
+          </div>
+
+          <div class="review">
+            <img src="assets/profile-3.jpg" />
+            <p>
+              <b>Pradeep Kumar </b
+              ><span
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam. cumque.</span
+              >
+            </p>
+          </div>
+        </div>
+        <!----------------- End of Review Section --------------->
+
+        <!----------------- Start of Sales Analytics --------------->
+
+        <h2>Sales Analytics</h2>
+        <div class="sales_analytics">
+          <div class="sale_data">
+            <span class="material-icons-sharp"> shopping_cart </span>
+            <div class="text">
+              <h6>Online Orders</h6>
+              <p>Last 24 Hours</p>
+            </div>
+            <p>+39%</p>
+            <p>3849</p>
+          </div>
+
+          <div class="sale_data">
+            <span class="material-icons-sharp"> shopping_bag </span>
+            <div class="text">
+              <h6>Offline Orders</h6>
+              <p>Last 24 Hours</p>
+            </div>
+            <p>+45%</p>
+            <p>4849</p>
+          </div>
+
+          <div class="sale_data">
+            <span class="material-icons-sharp"> person_add </span>
+            <div class="text">
+              <h6>New Customers</h6>
+              <p>Last 24 Hours</p>
+            </div>
+            <p>+21%</p>
+            <p>6849</p>
+          </div>
+        </div>
+        <!----------------- End of Sales Analytics --------------->
+
+        <div class="add_project">
+          <span class="material-icons-sharp"> add </span>
+          <p><b>Add Product</b></p>
+        </div>
+
+        <!----------------- End of Right side bar --------------->
+      </div>
+
+      <!----------------- End of Container --------------->
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
